@@ -1,0 +1,33 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.btn {
+  border: none; 
+  color: white; 
+  padding: 14px 28px; 
+  cursor: pointer;
+}
+
+.success {background-color: #ff9800;} 
+.warning {background-color: #4CAF50;}
+.back {background-color: #4CAF50;}
+h2{text-align: center;
+color:red
+}
+
+.red-text{
+  color:red;
+}

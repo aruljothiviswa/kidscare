@@ -1,0 +1,24 @@
+
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+  }
+  
+  /* Clear floats after the columns */
+  section:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .data{
+      
+      font-size: 24px;
+
+  }
+  footer{
+      text-align: center;
+  }
+ 

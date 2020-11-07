@@ -1,0 +1,49 @@
+<br>
+
+ <h2 class="page-header" >Student Details     <button style="margin:5px;" type="back" class="btn btn btn-success" (click)="back()">Back</button>
+    <button style="margin:5px;" type="logOut" class="btn btn btn-success" (click)="logout()">Log Out</button>
+</h2>
+   
+ <br>
+ <div class="col-6">
+    <div class="table table-striped">
+<div class="container">
+    <table style="width:100%">
+        <thead>
+        <tr>
+          <th>Register Number</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>DateOfBirth</th>
+          <th>Gender</th>
+          <th>FatherName</th>
+          <th>Father Ph.No</th>
+          <th>MotherName</th>
+          <th>Mother Ph.No</th>
+          <th>Address</th>
+          <th>PinCode</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+       <td>{{student.regnumber}}</td>
+       <td>{{student.first_name}}</td>
+       <td> {{student.last_name}}</td>
+       <td> {{student.dob | date:"dd-MM-yyyy"}}</td>
+       <td> {{student.gender}}</td>
+       <td>  {{student.father_name}}</td>
+       <td>  {{student.father_phno}}  </td>
+       <td>     {{student.mother_name}}</td>
+       <td>{{student.mother_phno}}</td>
+       <td>{{student.address}}</td>
+       <td> {{student.pincode}}</td>
+        
+        </tr>
+    </tbody>
+    </table>
+
+</div>
+</div>
+</div>
+
+

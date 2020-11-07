@@ -1,0 +1,41 @@
+
+<div class="container">
+    <div *ngFor="let student of students">
+        <div class="col-md-3">
+            {{student.regnumber}}
+        </div>
+        <div class="col-md-3">
+            {{student.first_name}}
+        </div>
+        <div class="col-md-3">
+            {{student.last_name}}
+        </div>
+       <div class="col-md-3">
+            {{student.dob}}
+        </div>
+        <div class="col-md-3">
+            {{student.gender}}
+        </div>
+        <div class="col-md-3">
+            {{student.father_name}}
+        </div>
+        <div class="col-md-3">
+            {{student.father_phno}}
+        </div>
+        <div class="col-md-3">
+            {{student.mother_name}}
+        </div>
+        <div class="col-md-3">
+            {{student.mother_phno}}
+        </div>
+        <div class="col-md-3">
+            {{student.address}}
+        </div>
+        <div class="col-md-3">
+            {{student.pincode}}
+        </div><div class="col-md-3">
+            <input type="button" (click)="backStudent()" value="Back" class="btn bnt-danger">
+           
+        </div>
+</div>
+

@@ -1,0 +1,126 @@
+
+
+
+<div class="container-fluid mt-2 p-5 " >
+    <h2 class="page-header" >Student Registration / Update     
+        <button  style="margin:5px;"  type="back" class="btn btn btn-success" (click)="back()">Back</button>
+        <button style="margin:5px;" type="logOut" class="btn btn btn-success" (click)="logout()">Log Out</button>
+      </h2>
+   
+    <br>
+    <div class="row">
+       <div class="col s12 jumbotron" style="border-radius:10px">
+         <form  #f ="ngForm"  (ngSubmit)="f.valid && addStudent(f)">
+   <!-- <form #f ="ngForm" name="form" (submit)="addStudent(f)" class="stu-form" autocomplete="=off">-->
+       <!--<input type="hidden" name="_id"  [(ngModel)]="student._id">-->
+      <div class="form-group">
+           <label>Register Number</label>
+           <label class="red-text">*</label> <br>
+           <input type="number" [(ngModel)]="regnumber" name="regnumber" class="form-control"  
+        required>
+        </div>
+      <br>
+     
+        <div class="form-group">
+            <label>First Name</label>
+            <label class="red-text">*</label> <br>
+            <input type="text"  [(ngModel)]="first_name" name="first_name" class="form-control"  
+            required>
+         </div>
+        <br>
+         <div class="form-group">
+            <label>Last Name</label> <br>
+            <input type="text" [(ngModel)]="last_name" name="last_name" class="form-control">
+         </div><br>
+         <div class="form-group">
+            <label>Date Of Birth</label>
+            <label class="red-text">*</label> <br>
+            <input type="date" [(ngModel)]="dob" name="dob" class="form-control">  required
+         </div><br>
+         <div class="form-group">
+            <label>Gender</label> <label class="red-text">*</label> <br>
+            <select name="gender" id="gender" [(ngModel)]="gender" class="form-control"  required>
+               <option value="female">Female</option>
+               <option value="male">Male</option>
+            </select>
+            
+         </div><br>
+         <div class="form-group">
+            <label>Father Name</label> <label class="red-text">*</label> <br>
+            <input type="text" [(ngModel)]="father_name" name="father_name" class="form-control"  required>
+         </div><br>
+         <div class="form-group">
+            <label>Father Phone Number</label>  <label class="red-text">*</label><br>
+            <input type="number" [(ngModel)]="father_phno" name="father_phno" class="form-control"  required>
+         </div><br>
+         <div class="form-group">
+            <label>Mother Name</label> <label class="red-text">*</label> <br>
+            <input type="text" [(ngModel)]="mother_name" name="mother_name" class="form-control"  required>
+         </div><br>
+         <div class="form-group">
+            <label>Mother Phone Number</label>  <label class="red-text">*</label><br>
+            <input type="number" [(ngModel)]="mother_phno" name="mother_phno" class="form-control"  required>
+         </div><br>
+         <div class="form-group">
+            <label>Address</label> <label class="red-text">*</label> <br>
+            <textarea id="address" name="address"  [(ngModel)]="address" rows="4" cols="50" class="form-control"  required>
+             </textarea>
+           
+         </div><br>
+         <div class="form-group">
+            <label>Pin Code</label>  <label class="red-text" >*</label><br>
+            <input type="number" [(ngModel)]="pincode" name="pincode" class="form-control"  required>
+         </div><br>
+         <div>
+             <button type="submit" class="btn btn btn-success">{{isEdit ? 'Update' : 'Save'}}</button>
+         </div>
+         
+    </form>
+    </div>
+ 
+
+<hr>
+           
+
+   <div class="col-6">
+   <div class="table table-striped">
+   <table >
+      <thead>
+         <tr>
+            
+         <th>Register Number</th>
+         <th>FullName</th>
+         <th>DateOfBirth</th>
+         <th>Gender</th>
+         <th>Delete</th>
+         <th>Update</th>
+         </tr>
+   </thead>
+   <tbody>
+       <tr *ngFor="let student of students">
+
+      <td>{{student.regnumber}}</td>
+      <td>{{student.first_name + ' ' +student.last_name}}</td>
+      
+      <td> {{student.dob | date:"dd-MM-yyyy"}}</td>
+      <td>{{student.gender}}</td>
+    
+    <td><button class="btn success" (click)="deleteStudent(student._id)" > Delete</button></td>
+    <td><button class="btn warning"  (click)="updStudent(student)">Update</button></td>
+   
+       </tr>
+   </tbody>
+   </table>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+

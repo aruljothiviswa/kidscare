@@ -1,0 +1,27 @@
+
+<form (submit)="loginUser($event)">
+<div class="container">
+  <h2>Admin Login</h2>
+  <div><img src="https://png.pngtree.com/png-clipart/20190603/original/pngtree-retro-key-png-image_164315.jpg" height="100px" width="100px"></div>
+    <div>
+      <label for="uname"><b>Username</b></label>
+      <br>
+        <input type="text" autocomplete="off" placeholder="UserName" id="username">
+    </div>
+    <div>
+         
+      <label for="psw"><b>Password</b></label>
+      <br>
+        <input type="password" autocomplete="off" placeholder="Password" id="password">
+    </div>
+    <div>
+        <button style="margin:5px;" type="submit" id="submit">
+         
+         Login
+        </button>
+        <button style="margin:5px;" type="cancel" class="cancelbtn"  (click)="nav()">
+          Cancel
+        </button>
+    </div>
+</div>
+
